@@ -827,8 +827,9 @@ section{
     font-weight: 600;
 }
 .port-content p{
-    font-size: .8rem;
+    font-size: 1rem;
     margin: 5px 0 15px 0;
+    color: var(--bg-color);
 }
 
 .port-content a{
@@ -1079,14 +1080,24 @@ footer a i{
         --h2-font:3rem; 
     }
     .home-content{
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
     .social-icons{
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
 
 @media(max-width:768px) {
+        .home {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center elements horizontally */
+    }
+    .home-content {
+        margin-top: 2rem; /* Adjust margin-top for smaller screens */
+    }
+    .social-icons {
+        margin-top: 1rem; /* Adjust margin-top for smaller screens */
+    }
     #menu-icon{
         display: block;
         transition: all .4s ease;
@@ -1116,11 +1127,17 @@ footer a i{
          top: 100%;
     }
 
-    .home{
-        grid-template-columns: 1fr;
+    .home {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center; /* Center elements horizontally */
     }
     .home-image{
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
+    }
+    .home-image img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+        min-height: 1000px;
     }
 
     .liquid-shape{
@@ -1160,5 +1177,9 @@ footer a i{
     }
     .img-about p{
         font-size: 1rem;
+    }
+    .home-image img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
     }
 }
